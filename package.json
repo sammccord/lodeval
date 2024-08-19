@@ -1,0 +1,30 @@
+{
+  "name": "lodeval",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --minify --external lodash --sourcemap=linked",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "lodash": "^4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.7",
+    "typescript": "^5.5.4"
+  }
+}
